@@ -1,0 +1,11 @@
+version: '2'
+services:
+  base:
+    image: node:slim
+    volumes:
+      - ../..:/usr/src/api
+    working_dir: /usr/src/api
+  install:
+    extends:
+      service: base
+    command: npm i
